@@ -14,6 +14,7 @@
   block-size: 100vh;
   min-inline-size: 320px;
   font-family: var(--font-main), sans-serif;
+  font-variation-settings: "wght" var(--weight-normal);
   font-size: var(--main-font-size);
   color: var(--main-color);
   background-image: var(--background-image);
@@ -22,7 +23,7 @@
 }
 
 .header {
-  font-family: var(--font-accent), Courier;
+  font-family: var(--font-accent), fantasy ;
   color: inherit;
   display: grid;
   justify-content: center;
@@ -47,9 +48,10 @@
 
 .header__title {
   font-weight: var(--weight-normal);
+  font-variation-settings: "wght" var(--weight-normal);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 .header__subtitle {
@@ -63,12 +65,19 @@
   display: flex;
   flex-direction: column;
   justify-self: center;
-  gap: 49px;
+  gap: 45px;
   width: var(--card-width);
+}
+
+@media (width <= 376px) {
+  .main__cards {
+    gap: 47px;
+  }
 }
 
 .main__article {
   font-family: var(--font-main), sans-serif;
+  font-variation-settings: "wght" var(--weight-normal);
   justify-self: center;
   border: 2px solid var(--main-color);
   background-color: var(--background-color);
@@ -81,6 +90,7 @@
 .card__image{
   width: 100%;
   object-fit: cover;
+  object-position: center;
   max-inline-size: 100%;
   max-block-size: 100%;
   border-block: 2px solid var(--main-color);
@@ -89,7 +99,7 @@
 .image__label {
   position: absolute;
   color: var(--main-color);
-  font-family: var(--font-accent), Courier;
+  font-family: var(--font-accent), fantasy ;
   inset-block-start: 27px;
   inset-inline-end: 26px;
   font-size: var(--accent-font-size);
@@ -99,6 +109,13 @@
   mix-blend-mode: hard-light;
   opacity: 0.5;
   z-index: 1;
+}
+
+@media (width <= 376px) {
+  .image__label {
+    inset-block-start: 25px;
+    inset-inline-end: 11px;
+  }
 }
 
 @supports ((text-stroke: 1px var(--label-accent)) or (-webkit-text-stroke: 1px var(--label-accent))) {
@@ -111,6 +128,7 @@
 
 .card__title {
   font-weight: var(--weight-bold);
+  font-variation-settings: "wght" var(--weight-bold);
   font-size: inherit;
   padding: 5px 10px;
 }
@@ -120,6 +138,12 @@
   padding-inline: 25px;
   padding-block-start: 24px;
   line-height: 21px;
+}
+
+@media (width <= 376px) {
+  .card__description {
+    padding-block-start: 23px;
+  }
 }
 
 .section__buttons {
@@ -141,25 +165,34 @@
   position: relative;
   display: flex;
   justify-self: center;
-  font-family: var(--font-accent), Courier;
+  font-family: var(--font-accent), fantasy ;
   font-weight: var(--weight-normal);
   font-size: var(--accent-font-size);
   flex-shrink: 0;
 }
 
 .card__icon-button {
-  background-color: inherit;
-  border: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  max-block-size: 38px;
+  inline-size: 38px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 0;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: 2px 2px 0 var(--accent-color);
 }
 
 .button__save {
-  font-family: var(--font-accent), Courier;
-  margin-block-start: 52px;
+  font-family: var(--font-accent), fantasy ;
+  margin-block-start: 48px;
   inline-size: 335px;
   block-size: 51px;
   background-color: inherit;
@@ -187,15 +220,19 @@
   }
 }
 
-.button__save::backdrop {
+.button__save[open]::backdrop {
   background: rgb(0, 0, 0, 0.75);
 }
 
 .dialog {
   width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
-  height: clamp(12.1875rem, 12.2315rem + -0.1878vw, 12.0625rem);
   padding: 30px 30px;
   box-sizing: border-box;
+}
+
+.dialog__save::backdrop {
+  background-color: var(--main-color);
+  opacity: 0.75;
 }
 
 .dialog__window {
@@ -283,4 +320,12 @@
   color: var(--blend-color);
   fill: var(--blend-color);
   mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  max-block-size: 38px;
+  inline-size: 38px;
 }
