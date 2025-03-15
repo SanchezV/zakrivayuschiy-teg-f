@@ -87,7 +87,7 @@
   position: relative;
 }
 
-.card__image{
+.card__image {
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -202,7 +202,6 @@
   gap: 5px;
   border: 2px solid var(--main-color);
   margin-block-end: 100px;
-  background-color: var(--background-color);
 }
 
 @media (width <= 376px) {
@@ -320,12 +319,4 @@
   color: var(--blend-color);
   fill: var(--blend-color);
   mix-blend-mode: difference;
-}
-
-.card__icon-button {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  max-block-size: 38px;
-  inline-size: 38px;
 }
