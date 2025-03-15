@@ -65,13 +65,13 @@
   display: flex;
   flex-direction: column;
   justify-self: center;
-  gap: 45px;
+  gap: 50px;
   width: var(--card-width);
 }
 
 @media (width <= 376px) {
   .main__cards {
-    gap: 47px;
+    gap: 52px;
   }
 }
 
@@ -194,21 +194,22 @@
   font-family: var(--font-accent), fantasy ;
   margin-block-start: 48px;
   inline-size: 335px;
-  block-size: 51px;
-  background-color: inherit;
+  block-size: 60px;
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   border: 2px solid var(--main-color);
   margin-block-end: 100px;
+
 }
 
 @media (width <= 376px) {
   .button__save {
     flex-direction: column;
     inline-size: 310px;
-    block-size: 84px;
+    block-size: 88px;
     gap: 8px;
     margin-block-start: 49px;
   }
@@ -240,6 +241,11 @@
   gap: 20px;
   grid-template-columns: 39px 1fr;
   height: 63px;
+}
+
+.main__button {
+  display: flex;
+  justify-content: center;
 }
 
 .button__accent {
