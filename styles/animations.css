@@ -33,37 +33,38 @@
   }
   
   .sparks {
+    fill: var(--heart-sparks-color);
     opacity: 0;
   }
   
   .card__icon-button .core {
     fill: transparent;
-    transition: fill 0.3s ease 0.03s;
+    transition: fill 0.3s linear 0.03s;
   }
   
   .card__icon-button .main-body {
     fill: transparent;
-    transition: fill 0.3s ease 0s;
+    transition: fill 0.3s linear 0s;
   }
   
   .card__icon-button:hover .main-body {
     fill: var(--heart-contour-color);
-    transition: fill 0.3s ease 0.05s;
+    transition: fill 0.3s linear 0.05s;
   }
   
   .card__icon-button:active .main-body {
     fill: var(--heart-sparks-color);
-    transition: fill 0.3s ease 0.05s;
+    transition: fill 0.3s linear 0.05s;
   }
   
   .card__icon-button:hover .core {
     fill: var(--heart-contour-color);
-    transition: fill 0.3s ease;
+    transition: fill 0.3s linear;
   }
   
   .card__icon-button:active .core {
     fill: var(--heart-sparks-color);
-    transition: fill 0.3s ease;
+    transition: fill 0.3s linear;
   }
   
   .card__icon-button .is-liked .contour {
@@ -82,10 +83,10 @@
   }
   
   .card__icon-button .is-liked .heart {
-    animation: like 1s ease-in 0.1s 1;
+    animation: pulse 0.3s ease-in 0.01s;
     transform-origin: center;
   }
   
   .card__icon-button .is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.3s 1;
+    animation: sparks 0.3s ease-in 0.3s;
   }  

@@ -220,8 +220,8 @@
   }
 }
 
-.button__save[open]::backdrop {
-  background: rgb(0, 0, 0, 0.75);
+.dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .dialog {
@@ -240,7 +240,6 @@
   align-items: center;
   gap: 20px;
   grid-template-columns: 39px 1fr;
-  height: 63px;
 }
 
 .main__button {
@@ -257,6 +256,7 @@
 
 .text__accent {
   text-transform: uppercase;
+  line-height: 150%;
 }
 
 .filter__opacity {
