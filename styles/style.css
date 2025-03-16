@@ -29,7 +29,7 @@
   justify-content: center;
   padding-block: clamp(7.5rem, 3.9111rem + 17.7778vw, 8rem);
   margin: 100px auto;
-  border: solid 2px black;
+  border: solid 2px var(--main-color);
   background-color: var(--header-bg-color);
 }
 
@@ -227,6 +227,7 @@
 .dialog {
   width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
   padding: 30px 30px;
+  border: 2px solid var(--main-color);
   box-sizing: border-box;
 }
 
@@ -240,6 +241,7 @@
   align-items: center;
   gap: 20px;
   grid-template-columns: 39px 1fr;
+  max-inline-size: 353px;
 }
 
 .main__button {
