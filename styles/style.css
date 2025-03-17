@@ -250,6 +250,7 @@
 }
 
 .button__accent {
+  justify-self: center;
   width: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
   height: 38px;
   margin-block-start: 30px;

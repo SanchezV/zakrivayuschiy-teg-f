@@ -83,7 +83,7 @@
   }
   
   .card__icon-button .is-liked .heart {
-    animation: pulse 0.3s ease-in 0.01s;
+    animation: like 0.3s ease-in 0.01s;
     transform-origin: center;
   }
   
